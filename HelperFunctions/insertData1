@@ -2,21 +2,17 @@
 
 DataBasePath=/home/eladawy/BashProject/DataBase/$1/*
 DataBaseLocation=/home/eladawy/BashProject/DataBase/$1
+function insert(){
 
 colNames=$(awk 'NR==1 {print; exit}' $DataBaseLocation/$2)
 colTypes=$(awk 'NR==2 {print; exit}' $DataBaseLocation/$2)
 pk=$(awk 'NR==3 {print; exit}' $DataBaseLocation/$2)
-function insert(){
+
  echo "insert Values sparetor by #: $colNames"
  read line
-}
-function delete(){
- echo "delete"
-}
-function update(){
-echo "update"
+ echo $line
 }
 
+
 export -f insert
-export -f delete
-export -f update
+

@@ -1,1 +1,5 @@
-id int pk subject string 
+id#name#salary#level#
+int#string#float#char#
+0
+1#ola#1000.23#A
+2#Ali#100.3#Q
